@@ -1511,8 +1511,8 @@ address {
 
     .btn-profile:hover,
     .btn-profile:focus {
-
-
+        color: #FFFFFF;
+        background-color: #404BBF;
         border-radius: 4px;
     }
 

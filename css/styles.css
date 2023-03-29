@@ -925,7 +925,8 @@ address {
 (min-resolution: 192dpi) and (max-width: 428px),
 (min-resolution: 2dppx) and (max-width: 428px) {
     .section-hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../imgs/bg@2x-mob.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+        url(../imgs/bg@2x-mob.jpg);
     }
 }
 
@@ -1304,7 +1305,7 @@ address {
         padding-bottom: 112px;
         background-color: var(--main-font-color);
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../imgs/hero-bg-desk.jpg);
+            url(../imgs/herobg.jpg);
 
         background-repeat: no-repeat;
         background-size: cover;
@@ -1580,7 +1581,7 @@ address {
 
         background-color: var(--main-font-color);
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../imgs/bg-mob.jpg);
+            url(../imgs/herobg.jpg);
         /* 
     background-repeat: no-repeat;
     background-size: cover;

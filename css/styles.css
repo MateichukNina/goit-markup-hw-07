@@ -131,7 +131,9 @@ address {
 
 
 
-
+.current {
+    color: #404BBF;
+}
 
 /* Footer */
 /* 
@@ -234,8 +236,7 @@ address {
     flex-wrap: wrap;
 
 }
-
-*/ .specialist-person-icon {
+ .specialist-person-icon {
     /* flex-basis: calc(100% / 4); */
     display: inline;
 
@@ -284,12 +285,12 @@ address {
 }
 
 @media screen and (max-width:480px) {
-    
-    .section-hero{
+
+    .section-hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../imgs/bg-mob.jpg);
+            url(../imgs/bg-mob.jpg);
     }
-    
+
 }
 
 
@@ -322,7 +323,28 @@ address {
 
 }
 
+.btn-subscribe {
+    background: var(--accent-color);
+    color: #FFFFFF;
+    border-radius: 4px;
+    width: 165px;
+    height: 40px;
+    /* border-color: transparent; */
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
 
+    display: flex;
+    align-items: center;
+    margin: auto;
+    letter-spacing: 0.04em;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: background-color var(--transition);
+
+
+}
 
 
 
@@ -355,12 +377,12 @@ address {
         position: fixed;
         width: 100%;
         height: 100%;
-        
+
         top: 0;
         left: 0;
         z-index: 1000;
         background: #FFFFFF;
-        
+
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -370,14 +392,20 @@ address {
         transition: opacity var(--transition), visibility var(--transition);
     }
 
-    .mobile-menu-container{
+    .mobile-menu-container {
         position: relative;
         padding-left: 40px;
-        padding-top: 80px;
+        max-width: 428px;
         padding-bottom: 40px;
+        padding-right: 16px;
         display: flex;
         flex-direction: column;
         height: 796px;
+        margin: auto;
+    }
+
+    .nav-mobile {
+        margin-top: 80px;
     }
 
     .mobile-menu.is-open {
@@ -391,10 +419,10 @@ address {
         display: block;
     }
 
-   
 
 
-    .mobile-close-btn{
+
+    .mobile-close-btn {
         position: absolute;
         background: #E7E9FC;
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -446,9 +474,9 @@ address {
 
     }
 
-    
-    .window-contacts{
-        margin-top: auto;   
+
+    .window-contacts {
+        margin-top: auto;
     }
 
     .mobile-mail {
@@ -673,26 +701,7 @@ address {
 
 
     .btn-subscribe {
-        background: var(--accent-color);
-        color: #FFFFFF;
-        border-radius: 4px;
-        width: 165px;
-        height: 40px;
-        /* border-color: transparent; */
-        border: none;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-
-        /* display: flex;
-        align-items: center;
-        text-align: center; */
-        letter-spacing: 0.04em;
-        padding: 8px 24px;
-        cursor: pointer;
-        transition: background-color var(--transition);
         margin-top: 16px;
-
     }
 
 
@@ -798,7 +807,8 @@ address {
     }
 
     .modal {
-        max-width: 392px;
+        max-width: 428px;
+        width: 100%;
         background-color: #FCFCFC;
         position: absolute;
         top: 50%;
@@ -886,7 +896,7 @@ address {
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
-    
+
         letter-spacing: 0.04em;
         padding: 16px 32px;
         border-radius: 4px;
@@ -897,8 +907,8 @@ address {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         /* transition: background var(--transition); */
-   
-    
+
+
     }
 
 
@@ -907,7 +917,7 @@ address {
         padding-bottom: 112px;
         background-color: var(--main-font-color);
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../imgs/bg-tab.jpg);
+            url(../imgs/bg-mob.jpg);
 
         background-repeat: no-repeat;
         background-size: cover;
@@ -918,15 +928,31 @@ address {
 
 
         text-align: center;
-}
+    }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 428px),
 (min-resolution: 192dpi) and (max-width: 428px),
 (min-resolution: 2dppx) and (max-width: 428px) {
     .section-hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-        url(../imgs/bg@2x-mob.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../imgs/bg@2x-mob.jpg);
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+    .mobile-phone {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 768px),
+(min-resolution: 192dpi) and (max-width: 768px),
+(min-resolution: 2dppx) and (max-width: 768px) {
+    .section-hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../imgs/bg@2x-tab.jpg);
     }
 }
 
@@ -945,6 +971,10 @@ address {
         display: none;
     }
 
+
+    .list.current {
+        color: #404BBF;
+    }
 
     .nav {
         display: flex;
@@ -1013,12 +1043,16 @@ address {
     }
 
 
+    .nav a.current{
+        color: #404BBF;
+    }
+
     /* .contacts a:hover,
     .contacts a:focus {
         color: #404BBF;
     } */
 
-    .list {
+    .address-list {
         margin-bottom: 12px;
     }
 
@@ -1043,7 +1077,7 @@ address {
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
-    
+
         letter-spacing: 0.04em;
         padding: 16px 32px;
         border-radius: 4px;
@@ -1054,17 +1088,17 @@ address {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         /* transition: background var(--transition); */
-        
-    
-    
+
+
+
     }
 
     .goals {
         display: flex;
         flex-wrap: wrap;
         padding: 0%;
-        gap:72px 24px ;
-       
+        gap: 72px 24px;
+
 
     }
 
@@ -1072,7 +1106,7 @@ address {
 
         text-align: left;
         flex-basis: calc((100% - 24px)/2);
-        
+
 
 
 
@@ -1100,7 +1134,7 @@ address {
 
     }
 
-  
+
 
     .projects-people {
         display: flex;
@@ -1116,7 +1150,7 @@ address {
 
         flex-basis: calc(100% - 24px / 2);
         justify-content: space-between;
-    
+
         max-width: 264px;
 
 
@@ -1155,7 +1189,7 @@ address {
     .customers-item {
         width: 168px;
         height: 88px;
-        
+
 
     }
 
@@ -1192,7 +1226,7 @@ address {
     .footer-container {
         display: flex;
         flex-wrap: wrap;
-        
+
     }
 
     .media-text {
@@ -1234,25 +1268,9 @@ address {
 
 
     .btn-subscribe {
-        background: var(--accent-color);
-        color: #FFFFFF;
-        border-radius: 4px;
-        width: 165px;
-        height: 40px;
-        margin-left: 24px;
-        /* border-color: transparent; */
-        border: none;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
 
-        display: flex;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.04em;
-        padding: 8px 24px;
-        cursor: pointer;
-        transition: background-color var(--transition);
+        margin-left: 24px;
+
 
     }
 
@@ -1377,12 +1395,12 @@ address {
     .bg-color {
         background-color: var(--border-bg-color);
         padding-top: 120px;
-       
+
         width: 100%;
 
     }
 
-    .bg-container{
+    .bg-container {
         width: 584px;
         margin-left: auto;
         margin-right: auto;
@@ -1472,8 +1490,8 @@ address {
 (min-resolution: 192dpi) and (min-width: 768px),
 (min-resolution: 2dppx) and (min-width: 768px) {
     .section-hero {
-        background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-         url(../imgs/hero-bg-desk.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../imgs/hero-bg-desk.jpg);
     }
 }
 
@@ -1503,25 +1521,34 @@ address {
         display: flex;
     }
 
+    .address-list {
+        margin-bottom: 0;
+    }
 
+    .current {
+        color: #404BBF;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        color: #404BBF;
+    }
 
     .goals {
         display: flex;
         flex-wrap: nowrap;
-       
+
         padding: 0%;
-
-
     }
 
     .goals-item {
         text-align: left;
         flex-basis: calc(100% - 72px / 4);
-       
+
 
     }
 
-   
+
 
 
     .goals-item::before {
@@ -1570,6 +1597,18 @@ address {
         /* or 150% */
 
         letter-spacing: 0.02em;
+    }
+
+
+    .contacts a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--secondare-font-color);
+
+        margin: 0%;
+        transition: color var(--transition);
     }
 
 
@@ -1641,7 +1680,7 @@ address {
 
     }
 
-   
+
 
     .customers-logo:hover,
     .customers-logo:focus {
@@ -1661,7 +1700,7 @@ address {
 
         margin-top: 120px;
     }
-   
+
 
     .subscribe {
         margin-left: 80px;
@@ -1707,7 +1746,7 @@ address {
         align-items: baseline;
     }
 
-   
+
 
     /* .nav-profile {
         display: flex;
@@ -1828,9 +1867,9 @@ address {
 (min-resolution: 192dpi) and (min-width: 1200px),
 (min-resolution: 2dppx) and (min-width: 1200px) {
     .section-hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-        url(../imgs/hero-bg-desk.jpg);
-        
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../imgs/hero-bg-desk.jpg);
+
     }
 
 
@@ -1904,8 +1943,8 @@ img {
 
 
 .customers-logo {
-    width: 168px;
-    height: 88px;
+    width: 100%;
+    height: 100%;
     border-radius: 4px;
     align-items: center;
     justify-content: center;
@@ -2252,9 +2291,9 @@ img {
 
 .user-policy-text::before {
     content: "";
-    display: block;
+    display: flex;
     margin-right: 8px;
-
+    flex-shrink: 0;
     width: 16px;
     height: 16px;
     border: 1px solid #2E2F42;
